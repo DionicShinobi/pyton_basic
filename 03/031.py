@@ -18,6 +18,6 @@ elif operation == '/':
 else:
     result = "Error: Unknown operation!"
 
-print("Result", result)
+print("Result:", result)
 
 
