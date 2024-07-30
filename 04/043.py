@@ -2,7 +2,7 @@ import random
 
 # Створюємо список випадкових чисел із випадковою кількістю елементів від 3 до 10
 list_length = random.randint(3, 10)
-random_list = [random.randint(0, 100) for _ in range(list_length)]
+random_list = [random.randint(0, 10) for _ in range(list_length)]
 
 print("Початковий список:", random_list)
 
