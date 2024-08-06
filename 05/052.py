@@ -1,8 +1,8 @@
 print("New version of the Calculator on Python")
 
+# Беремо основу прогруми відпрацьовану раніше та модифікуємо(цикл)
 while True:
 
-    # Беремо основу прогруми відпрацьовану раніше та модифікуємо
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
     operation = input("Select an operation (+, -, *, /): ")
@@ -25,6 +25,7 @@ while True:
 
     print(f"Result: {result}")
 
+    # Додаємо запит до користувача на вибір продовження програми чи завершення
     if input("Do you want to continue? (y/n): ").lower() != 'y':
         print("Goodbye!)")
         break
