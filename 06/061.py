@@ -16,9 +16,7 @@ while True:
     # Повертаємо всі символи між ними включно
     result = all_letters[start_index:end_index + 1]
 
-    # Виводимо результат
     print(result)
-
 
     choice = input("Do you want to continue? (y/n): ")
 

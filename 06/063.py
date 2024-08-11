@@ -9,9 +9,7 @@ while True:
             result *= int(digit)
         number = result
 
-    # Виводимо кінцевий результат
     print(number)
-
 
     choice = input("Do you want to continue? (y/n): ").strip().lower()
 
