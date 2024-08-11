@@ -19,7 +19,7 @@ while True:
     # Виведення результату з форматуванням
     print(f"{days_str}, {hours:02}:{minutes:02}:{seconds:02}")
 
-    # Запит на продовження або вихід
+
     choice = input("Бажаєте ввести ще одне число? (y/n): ").strip().lower()
 
     if choice != 'y':

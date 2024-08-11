@@ -26,7 +26,7 @@ while True:
     else:
         print(True)
 
-    # Запит на продовження або вихід
+
     continue_choice = input("Want to check another variable name? (y/n): ").strip().lower()
 
     if continue_choice != 'y':

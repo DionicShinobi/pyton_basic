@@ -12,7 +12,7 @@ while True:
     # Виводимо кінцевий результат
     print(number)
 
-    # Запитуємо у користувача, чи хоче він продовжити
+
     choice = input("Do you want to continue? (y/n): ").strip().lower()
 
     if choice != 'y':
