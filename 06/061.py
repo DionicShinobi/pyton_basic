@@ -1,7 +1,7 @@
 import string
 
 while True:
-    # Отримуємо введений рядок від користувача
+
     input_str = input("Enter two letters separated by a hyphen: ")
 
     all_letters = string.ascii_letters  # Всі літери
@@ -23,5 +23,5 @@ while True:
     choice = input("Do you want to continue? (y/n): ")
 
     if choice.lower() != 'y':
-        print("Completion of the program.")
+        print("Completion of the program. Have a nice day!)")
         break

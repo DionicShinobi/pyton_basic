@@ -1,26 +1,34 @@
 import string
 import keyword
 
-variable_name = input("Введіть ім'я змінної: ")
+while True:
+    variable_name = input("Enter a variable name: ")
 
-# Перевірка 1, чи не є ім'я зареєстрованим словом
-if variable_name in keyword.kwlist:
-    print(False)
-
-else:
-    # Перевірка 2, чи починається ім'я з цифри
-    if variable_name[0].isdigit():
+    # Перевірка на зареєстроване слово
+    if variable_name in keyword.kwlist:
         print(False)
 
+    # Перевірка на початок з цифри
+    elif variable_name[0].isdigit():
+        print(False)
+
+    # Перевірка на великі літери
+    elif any(char.isupper() for char in variable_name):
+        print(False)
+
+    # Перевірка на знаки пунктуації, крім "_"
+    elif any(char in string.punctuation.replace("_", "") for char in variable_name):
+        print(False)
+
+    # Перевірка на правильність підкреслень
+    elif "__" in variable_name:
+        print(False)
     else:
-        # Перевірка 3, на наявність заборонених символів та великих літер
-        allowed_chars = string.ascii_lowercase + string.digits + "_"
-        if any(char not in allowed_chars for char in variable_name):
-            print(False)
-            
-        else:
-            # Перевірка 4 на кількість нижніх підкреслень
-            if variable_name.count('_') > 1:
-                print(False)
-            else:
-                print(True)
+        print(True)
+
+    # Запит на продовження або вихід
+    continue_choice = input("Want to check another variable name? (y/n): ").strip().lower()
+
+    if continue_choice != 'y':
+        print("Completion of the program. Have a nice day!")
+        break
