@@ -20,12 +20,12 @@ while True:
     elif any(char in string.punctuation.replace("_", "") for char in variable_name):
         print(False)
 
-    # Перевірка на правильність підкреслень
-    elif "__" in variable_name:
+    # Перевірка на те, що ім'я складається виключно з двох або більше підкреслень
+    elif len(variable_name) > 1 and variable_name.strip('_') == "":
         print(False)
+
     else:
         print(True)
-
 
     continue_choice = input("Want to check another variable name? (y/n): ").strip().lower()
 
